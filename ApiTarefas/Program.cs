@@ -10,7 +10,6 @@ builder.Services.AddDbContext<AppDbContext>(opt =>
     opt.UseInMemoryDatabase("TarefasDB"));
 
 var app = builder.Build();
-
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
@@ -18,7 +17,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-app.MapGet("/", ()=> "Olá Mundo");
+app.MapGet("/", ()=> "OlÃ¡ Mundo");
 
 app.MapGet("frases", async () =>
     await new HttpClient().GetStringAsync("http://ron-swanson-quotes.herokuapp.com/v2/quotes")
