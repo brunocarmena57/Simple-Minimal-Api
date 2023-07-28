@@ -62,8 +62,6 @@ app.MapDelete("/tarefas/{id}", async (int id, AppDbContext db) =>
     return Results.NotFound();
 });
 
-
-
 app.Run();
 
 class Tarefa
