@@ -76,6 +76,5 @@ class AppDbContext : DbContext
     {
 
     }
-
     public DbSet<Tarefa> Tarefas => Set<Tarefa>();
 }
